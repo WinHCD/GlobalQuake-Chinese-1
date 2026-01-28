@@ -12,10 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # 仅添加这部分权限声明即可解决核心错误
-    permissions:
-      contents: write  # 授予创建Release、标签、上传资产的核心权限
-    
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
