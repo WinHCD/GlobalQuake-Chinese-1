@@ -1,4 +1,5 @@
 基于[muwenyan521](https://github.com/muwenyan521)汉化的[GlobalQuake v0.11.0_pre-2-20](https://github.com/muwenyan521/GlobalQuake-Chinese/releases/tag/v0.11.0_pre-2-20)二次汉化，本次汉化主要针对的是地震位置以及受影响的城市名称。
+
 点击跳转：[muwenyan521汉化版GlobalQuake仓库](https://github.com/muwenyan521/GlobalQuake-Chinese)、[原版GlobalQuake仓库（已存档）](https://github.com/xspanger3770/GlobalQuake)
 
 
