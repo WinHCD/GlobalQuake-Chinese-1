@@ -2,6 +2,8 @@
 
 点击跳转：[muwenyan521汉化版GlobalQuake仓库](https://github.com/muwenyan521/GlobalQuake-Chinese)、[原版GlobalQuake仓库（已存档）](https://github.com/xspanger3770/GlobalQuake)
 
+备用地址：[Gitee](https://gitee.com/damahoue/GlobalQuake-Chinese-1)
+
 
 以下是关于GlobalQuake的介绍（来自muwenyan521）：
 <h1 align="center">
