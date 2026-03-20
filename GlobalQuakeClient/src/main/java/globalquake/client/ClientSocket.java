@@ -93,11 +93,13 @@ public class ClientSocket {
     }
 
     private void checkReconnect() {
-        if(!socket.isConnected() || socket.isClosed()){
+        if(socket == null || !socket.isConnected() || socket.isClosed() || status == ClientSocketStatus.DISCONNECTED){
             try {
                 connect(ip, port);
             } catch (Exception e) {
                 Logger.error("无法重新连接: %s".formatted(e.getMessage()));
+                status = ClientSocketStatus.DISCONNECTED;
+                socket = null;
             }
         }
     }
@@ -133,10 +135,10 @@ public class ClientSocket {
                 socket.close();
             } catch(SocketTimeoutException | SocketException e){
                 Logger.trace(e);
-                onClose();
             } catch (IOException e) {
                 Logger.error(e);
-                onClose();
+            } finally {
+                socket = null;
             }
         }
 
@@ -146,7 +148,7 @@ public class ClientSocket {
     }
 
     public boolean isConnected(){
-        return socket.isConnected() && !socket.isClosed();
+        return socket != null && socket.isConnected() && !socket.isClosed();
     }
 
     private void runReader() {
